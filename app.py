@@ -19,10 +19,10 @@ def preprocess_image(image):
     return image
 
 def main():
-    st.title("Classificação de Imagens com CNN")
-    st.write("Carregue uma imagem e o modelo CNN fará a previsão.")
+    st.title("Classificação de Imagens com CNN para Deteção de Sono com Imagens.")
+    st.write("Carregue uma imagem e o modelo CNN fará a previsão para deteção de sono..")
 
-    uploaded_file = st.file_uploader("Escolha uma imagem...", type=["jpg", "jpeg", "png"])
+    uploaded_file = st.file_uploader("Escolha uma imagem ..", type=["jpg", "jpeg", "png"])
 
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
@@ -35,9 +35,9 @@ def main():
         prediction = model.predict(processed_image)
 
         if prediction >= 0.5:
-            st.write("A previsão é: Probabilidade {:.2f} olhos fechados ".format(float(prediction)))
+            st.write(" Probabilidade {:.2f} > 0.5, então , os olhos estão fechados.. deteção de sono..".format(float(prediction)))
         else:
-            st.write("A previsão é: Probabilidade {:.2f}  olhos abertos".format(float(prediction)))
+            st.write(" Probabilidade {:.2f} < 0.5,então ,os  olhos estão  abertos, não há sono".format(float(prediction)))
 
 if __name__ == "__main__":
     main()
