@@ -8,7 +8,7 @@ import numpy as np
 # Carregar o modelo ao iniciar o aplicativo
 @st.cache_resource
 def load_my_model():
-    return load_model('/content/model_image.h5')
+    return load_model('model_image.h5')
 
 # Pré-processar a imagem
 def preprocess_image(image):
