@@ -1,8 +1,6 @@
-Flask
+streamlit
 numpy
 tensorflow==2.15.0
 pandas
 matplotlib
-searborn
 scikit-learn
-gunicorn
