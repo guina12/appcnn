@@ -35,9 +35,9 @@ def main():
         prediction = model.predict(processed_image)
 
         if prediction >= 0.5:
-            st.write(" Probabilidade {:.2f} > 0.5, então , os olhos estão fechados.. deteção de sono..".format(float(prediction)))
+            st.write(" Probabilidade {:.2f}  >  0.5  , os olhos estão fechados.. deteção de sono..".format(float(prediction)))
         else:
-            st.write(" Probabilidade {:.2f} < 0.5,então ,os  olhos estão  abertos, não há sono".format(float(prediction)))
+            st.write(" Probabilidade {:.2f}  < 0.5  , os  olhos estão  abertos, não há sono".format(float(prediction)))
 
 if __name__ == "__main__":
     main()
